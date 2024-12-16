@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background: #000;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+video {
+  width: 100%;
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  opacity: 0.8;
+  filter: hue-rotate(100deg);
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 30px;
+  width: 38%;
+  height: 350px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card::before {
+  content: "";
+  mix-blend-mode: darken;
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(10px);
+  z-index: -1;
+  background: linear-gradient(to bottom, transparent, #000),
+    linear-gradient(to right, transparent, #00000065, #00000038, #000);
+}
+
+h2{
+  font-size: 40px;
+  margin-top: 30px;
+  font-family: "Acme", sans-serif;
+}
+
+h2 span{
+    color: #faff00;
+}
+
+p {
+  width: 75%;
+  line-height: 1.8;
+  opacity: 0.8;
+  font-family: "Poppins", sans-serif;
+  margin-top: 20px;
+}
+
+p::first-line {
+  font-size: 20px;
+  font-family: "Acme", sans-serif;
+  color: #faff00;
+  opacity: 1;
+}
